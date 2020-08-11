@@ -1,10 +1,11 @@
 from django.db import models
+from apps.city.models import City
 
 
 class Shop(models.Model):
     title = models.CharField(max_length=150, verbose_name='Название')
-    # city = ManyToManyField(City, verbose_name='Город')
-    street = models.CharField(max_length=255, verbose_name='Улица')
+    city = models.ForeignKey(City, on_delete=models.CASCADE, null=False, verbose_name='Город')
+    street = models.ForeignKey(City, on_delete=models.CASCADE, null=False, verbose_name='Город')
     house = models.CharField(max_length=255, verbose_name='Дом')
     time_open = models.TimeField(verbose_name='Время открытия')
     time_close = models.TimeField(verbose_name='Время закрытия')
