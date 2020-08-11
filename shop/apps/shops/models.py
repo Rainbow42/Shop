@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Shop(models.Model):
-    title = models.CharField(max_length=150, verbose_name='Наименование')
+    title = models.CharField(max_length=150, verbose_name='Название')
     # city = ManyToManyField(City, verbose_name='Город')
     street = models.CharField(max_length=255, verbose_name='Улица')
     house = models.CharField(max_length=255, verbose_name='Дом')
