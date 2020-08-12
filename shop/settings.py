@@ -18,7 +18,7 @@ BASE_DIR = pathlib.Path(__file__).resolve(strict=True).parent.parent
 
 env = environ.Env()
 
-DOT_ENV_FILE = env.str('DOT_ENV_FILE', '/shop/.env')
+DOT_ENV_FILE = env.str('DOT_ENV_FILE', '.env')
 print(DOT_ENV_FILE)
 if DOT_ENV_FILE:
     env.read_env(DOT_ENV_FILE)
@@ -44,6 +44,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
+
+    'apps.shops',
+    'apps.city',
+    'apps.street',
 ]
 
 MIDDLEWARE = [
