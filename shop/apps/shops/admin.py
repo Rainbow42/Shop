@@ -1,9 +1,7 @@
 from django.contrib import admin
 from . import models
 from django.contrib import messages
-
 from apps.street.models import Street
-from apps.city.models import City
 from .models import Shop
 
 
@@ -14,10 +12,9 @@ class ShopAdmin(admin.ModelAdmin):
     search_fields = ('title',)
 
     def save_model(self, request, obj, form, change):
-        city = City.objects.filter(title=obj.city)
         street = Street.objects.get(title=str(obj.street))
         if street.city == obj.city:
             super(ShopAdmin, self).save_model(request, obj, form, change)
         else:
-           messages.set_level(request, messages.ERROR)
-           messages.error(request, 'No changes are permitted ..')
+            messages.set_level(request, messages.ERROR)
+            messages.error(request, 'No changes are permitted ..')
