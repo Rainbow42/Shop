@@ -8,6 +8,6 @@ class CityListView(APIView):
     """"Output a list of cities"""
 
     def get(self, request):
-        cities = City.objects.filter()
+        cities = City.objects.all()
         serializer = CityListSerializer(cities, many=True)
         return Response(serializer.data)
