@@ -12,8 +12,8 @@ class ShopAdmin(admin.ModelAdmin):
     list_display_links = ('id', 'title')
     search_fields = ('title',)
 
-    """Checking for the existence of streets in the city"""
     def save_model(self, request, obj, form, change):
+        """Checking for the existence of streets in the city"""
         street = Street.objects.get(title=str(obj.street))
         if street.city == obj.city:
             super(ShopAdmin, self).save_model(request, obj, form, change)

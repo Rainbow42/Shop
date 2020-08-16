@@ -27,8 +27,8 @@ class ShopListView(generics.ListAPIView):
             queryset = queryset.filter(time_close__lte=now, time_open__lte=now)
         return queryset
 
-    """Checking for the existence of streets in the city"""
     def post(self, request):
+        """Checking for the existence of streets in the city"""
         shop = ShopCreateSerializer(data=request.data)
         if shop.is_valid():
             data = request.data

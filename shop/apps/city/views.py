@@ -10,7 +10,3 @@ class CityListView(generics.ListAPIView):
     serializer_class = CityListSerializer
     queryset = City.objects.all()
 
-    def list(self, request):
-        queryset = self.get_queryset()
-        serializer = CityListSerializer(queryset, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
