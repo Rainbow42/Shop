@@ -1,5 +1,6 @@
-from apps.city.models import City
 from django.db import models
+
+from apps.city.models import City
 
 
 class Street(models.Model):
