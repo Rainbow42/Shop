@@ -1,3 +1,4 @@
+from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Street
@@ -9,5 +10,8 @@ class StreetDetailCityView(APIView):
 
     def get(self, request, pk):
         street = Street.objects.filter(city=pk)
+        print(street)
         serializer = StreetDetailCitySerializer(street, many=True)
-        return Response(serializer.data)
+        if len(street) != 0:
+            return Response(serializer.data, status=200)
+        return Response(serializer.data, status=status.HTTP_404_NOT_FOUND)
