@@ -20,7 +20,6 @@ class ShopListView(generics.ListAPIView):
     def get_queryset(self):
         queryset = Shop.objects.all()
         now = timezone.now()
-        print(now)
         open = self.request.query_params.get('open', None)
         if open == '1':
             queryset = queryset.filter(time_close__gte=now, time_open__lte=now)
