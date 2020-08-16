@@ -10,8 +10,7 @@ class StreetDetailCityView(APIView):
 
     def get(self, request, pk):
         street = Street.objects.filter(city=pk)
-        print(street)
         serializer = StreetDetailCitySerializer(street, many=True)
-        if len(street) != 0:
-            return Response(serializer.data, status=200)
-        return Response(serializer.data, status=status.HTTP_404_NOT_FOUND)
+        if street.count() != 0:
+            return Response(serializer.data, status.HTTP_200_OK)
+        return Response(serializer.data, status=status.HTTP_200_OK)

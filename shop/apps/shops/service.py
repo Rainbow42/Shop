@@ -8,8 +8,6 @@ class ShopFilter(filters.FilterSet):
     city = CharFilter(field_name='city__title')
     street = CharFilter(field_name='street__title')
 
-    # missing = BooleanFilter(field_name='time_open', lookup_expr='isnull')
-
     class Meta:
         model = Shop
-        fields = ['title', 'city', 'street', 'time_open']
+        fields = ['title', 'city', 'street']
