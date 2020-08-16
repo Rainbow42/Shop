@@ -1,5 +1,7 @@
+from django_filters import CharFilter, NumberFilter
 from django_filters import rest_framework as filters
-from django_filters import rest_framework as rest_filters, NumberFilter, CharFilter
+from django_filters import rest_framework as rest_filters
+
 from .models import Shop
 
 

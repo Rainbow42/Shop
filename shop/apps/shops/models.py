@@ -1,6 +1,6 @@
-from django.db import models
 from apps.city.models import City
 from apps.street.models import Street
+from django.db import models
 from django.http import HttpResponse
 
 

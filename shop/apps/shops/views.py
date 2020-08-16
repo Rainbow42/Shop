@@ -1,12 +1,12 @@
-from rest_framework import status
-from rest_framework.response import Response
-from django_filters.rest_framework import DjangoFilterBackend
-from .models import Shop
 from apps.street.models import Street
+from django.utils import timezone
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import generics, status
+from rest_framework.response import Response
+
+from .models import Shop
 from .serializers import ShopCreateSerializer, ShopListSerializer
 from .service import ShopFilter
-from rest_framework import generics
-from django.utils import timezone
 
 
 class ShopListView(generics.ListAPIView):

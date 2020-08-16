@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import pathlib
+
 import environ
 
 BASE_DIR = pathlib.Path(__file__).resolve(strict=True).parent.parent
