@@ -4,6 +4,4 @@ from apps.shops import views
 
 urlpatterns = [
     path("shop/", views.ShopListView.as_view()),
-    path("shop/", views.ShopCreateView.as_view()),
-
 ]

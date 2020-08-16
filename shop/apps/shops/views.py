@@ -27,10 +27,6 @@ class ShopListView(generics.ListAPIView):
             queryset = queryset.filter(time_close__lte=now, time_open__lte=now)
         return queryset
 
-
-class ShopCreateView(APIView):
-    """Сreating a shop"""
-
     def post(self, request):
         shop = ShopCreateSerializer(data=request.data)
         data = request.data
@@ -41,3 +37,6 @@ class ShopCreateView(APIView):
                 return Response(shop.data, status=202)
         else:
             return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+
