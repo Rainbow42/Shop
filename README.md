@@ -37,12 +37,10 @@
 4. Устаовить зависимости: `pip install -r requirements.txt`
 5. Создать базу данных PostgreSQL 12:
     1. Подключиться к БД через psql: `psql -U postgres`
-    2. Создаем пользователя и настраеваем пароль `create user user_name with password 'password';`
+    2. Создаем пользователя и настраеваем пароль `create user user_name with password 'PASSWORD';`
     3. Создать БД: `create database shop owner user_name;`
 7. Установить переменные окружения:
     1. DOT_ENV_FILE=абсолютный_путь_до_locals.env.envs
 8. Накатить миграции: `python manage.py migrate`
 
-##Информация о доступах (логины/пароли и т.д.) *
-1. Суперпользователь login: admin  password:123qweASD
 
