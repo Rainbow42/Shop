@@ -36,7 +36,7 @@
 3. Активировать виртуальное окружение `source env/bin/activate`
 4. Устаовить зависимости: `pip install -r requirements.txt`
 5. Создать базу данных PostgreSQL 12:
-    1. Создаем пользователя и насоаевам пароль `create user user_name with password 'password';`
+    1. Создаем пользователя и настраеваем пароль `create user user_name with password 'password';`
     2. Подключиться к БД через psql: `psql -U postgres`
     3. Создать БД: `create database shop owner user_name;
 7. Установить переменные окружения:
