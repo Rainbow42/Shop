@@ -44,4 +44,6 @@
 8. Накатить миграции: `python manage.py migrate`
 9. Запустить сервер `python manage.py runserver`
 
+##Информация о доступах (логины/пароли и т.д.) *
 
+1. Создать суперпользователя `python manage.py createsuperuser`
