@@ -42,5 +42,6 @@
 7. Установить переменные окружения:
     1. DOT_ENV_FILE=абсолютный_путь_до_locals.env.envs
 8. Накатить миграции: `python manage.py migrate`
+9. Запустить сервер `python manage.py runserver`
 
 
