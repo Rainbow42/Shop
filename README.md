@@ -38,7 +38,7 @@
 5. Создать базу данных PostgreSQL 12:
     1. Подключиться к БД через psql: `psql -U postgres`
     2. Создаем пользователя и настраеваем пароль `create user user_name with password 'password';`
-    3. Создать БД: `create database shop owner user_name;
+    3. Создать БД: `create database shop owner user_name;`
 7. Установить переменные окружения:
     1. DOT_ENV_FILE=абсолютный_путь_до_locals.env.envs
 8. Накатить миграции: `python manage.py migrate`
