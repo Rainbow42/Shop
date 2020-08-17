@@ -1,8 +1,7 @@
-from django.db import models
-from django.http import HttpResponse
-
 from apps.city.models import City
 from apps.street.models import Street
+from django.db import models
+from django.http import HttpResponse
 
 
 class Shop(models.Model):

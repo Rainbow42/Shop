@@ -1,7 +1,5 @@
-from django.contrib import admin, messages
-
 from apps.street.models import Street
-
+from django.contrib import admin, messages
 from . import models
 from .models import Shop
 
